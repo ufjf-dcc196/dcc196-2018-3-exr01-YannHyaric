@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Aluno" />
-        <activity android:name=".Servidor"></activity>
+        <activity android:name=".Servidor" />
+        <activity android:name=".Externo"></activity>
     </application>
 
 </manifest>

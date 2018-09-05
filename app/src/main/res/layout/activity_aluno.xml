@@ -7,7 +7,7 @@
     tools:context=".Aluno">
 
     <EditText
-        android:id="@+id/edt_Nome"
+        android:id="@+id/edt_NomeAluno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_entrarAluno"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Entrar"
@@ -39,8 +39,8 @@
         android:ems="10"
         android:hint="Matricula"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_entrarAluno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_Nome" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_NomeAluno" />
 </android.support.constraint.ConstraintLayout>
