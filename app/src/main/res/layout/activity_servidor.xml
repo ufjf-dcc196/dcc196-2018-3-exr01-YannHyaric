@@ -4,43 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Aluno">
+    tools:context=".Servidor">
 
     <EditText
-        android:id="@+id/edt_Nome"
+        android:id="@+id/edt_NomeServ"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="35dp"
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edt_Siape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
+    <EditText
+        android:id="@+id/edt_Siape"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Siape"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_NomeServ" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="315dp"
+        android:layout_marginTop="13dp"
         android:text="Entrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394" />
-
-    <EditText
-        android:id="@+id/edt_Matricula"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="Matricula"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_Nome" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_Siape" />
 </android.support.constraint.ConstraintLayout>
