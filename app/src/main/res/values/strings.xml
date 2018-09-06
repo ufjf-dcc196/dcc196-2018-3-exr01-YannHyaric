@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Exercicio</string>
+    <string name="alunos">Alunos: 0</string>
+    <string name="externos">Externos: 0</string>
+    <string name="servidor">Servidor</string>
+    <string name="aluno">Aluno</string>
+    <string name="externo">Externo</string>
+    <string name="cadastrar">Cadastrar:</string>
+    <string name="servidores">Servidores: 0</string>
 </resources>
