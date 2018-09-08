@@ -7,4 +7,10 @@
     <string name="externo">Externo</string>
     <string name="cadastrar">Cadastrar:</string>
     <string name="servidores">Servidores: 0</string>
+    <string name="nome">Nome</string>
+    <string name="siape">Siape</string>
+    <string name="entrar">Entrar</string>
+    <string name="matricula">Matricula</string>
+    <string name="e_mail">e-mail</string>
+    <string name="email">email</string>
 </resources>
