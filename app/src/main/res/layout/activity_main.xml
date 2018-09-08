@@ -93,17 +93,16 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_Servidor" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="41dp"
         android:text="@string/cadastrar"
-        android:textAppearance="@android:style/TextAppearance.Holo.Light.Medium"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_Aluno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

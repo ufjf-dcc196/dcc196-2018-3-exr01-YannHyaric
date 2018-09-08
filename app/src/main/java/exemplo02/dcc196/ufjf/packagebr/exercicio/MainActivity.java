@@ -12,8 +12,9 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
     private Button btnAluno,btnServ,btnExt;
     private TextView numAlunos,numServ,numExt;
-    private static int ALUNOS=0,SERVIDORES=0,EXTERNOS=0;
+    private static int REQUEST=0;
     private ArrayMap<EditText,EditText> alunos,servidores,externos;
+    public static final String NOME="",INFO="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,24 +31,25 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent aluno=new Intent(MainActivity.this,Aluno.class);
-                startActivityForResult(aluno,MainActivity.ALUNOS);
-                numAlunos.setText("Alunos: "+Integer.toString(ALUNOS));
+                startActivityForResult(aluno,MainActivity.REQUEST);
+
+                numAlunos.setText("Alunos: "+Integer.toString(alunos.size()));
             }
         });
         btnServ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent servidor=new Intent(MainActivity.this,Servidor.class);
-                startActivityForResult(servidor,MainActivity.SERVIDORES);
-                numServ.setText("Servidores: "+Integer.toString(SERVIDORES));
+                startActivityForResult(servidor,MainActivity.REQUEST);
+                numServ.setText("Servidores: "+Integer.toString(servidores.size()));
             }
         });
         btnExt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent externo=new Intent(MainActivity.this,Externo.class);
-                startActivityForResult(externo,MainActivity.EXTERNOS);
-                numExt.setText("Externos"+Integer.toString(EXTERNOS));
+                startActivityForResult(externo,MainActivity.REQUEST);
+                numExt.setText("Externos"+Integer.toString(externos.size()));
             }
         });
 
