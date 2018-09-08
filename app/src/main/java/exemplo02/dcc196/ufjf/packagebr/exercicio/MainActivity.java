@@ -12,9 +12,9 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
     private Button btnAluno,btnServ,btnExt;
     private TextView numAlunos,numServ,numExt;
-    private static int REQUEST=0;
-    private ArrayMap<EditText,EditText> alunos,servidores,externos;
-    public static final String NOME="",INFO="";
+    public static int REQUEST=0;
+    private ArrayMap<String,String> alunos,servidores,externos;
+    public static final String NOME="nome",INFO="info";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent aluno=new Intent(MainActivity.this,Aluno.class);
                 startActivityForResult(aluno,MainActivity.REQUEST);
-
-                numAlunos.setText("Alunos: "+Integer.toString(alunos.size()));
-            }
+                }
         });
         btnServ.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,5 +51,14 @@ public class MainActivity extends Activity {
             }
         });
 
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Bundle resultado=data.getExtras();
+        switch (REQUEST){
+            case 1:
+                alunos.put(resultado.getString(NOME),resultado.getString(INFO));
+                numAlunos.setText("Alunos: "+Integer.toString(alunos.size()));
+        }
     }
 }
