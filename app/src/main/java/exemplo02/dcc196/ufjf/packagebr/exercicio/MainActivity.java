@@ -39,7 +39,6 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent servidor=new Intent(MainActivity.this,Servidor.class);
                 startActivityForResult(servidor,MainActivity.REQUEST);
-                numServ.setText("Servidores: "+Integer.toString(servidores.size()));
             }
         });
         btnExt.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +46,6 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent externo=new Intent(MainActivity.this,Externo.class);
                 startActivityForResult(externo,MainActivity.REQUEST);
-                numExt.setText("Externos"+Integer.toString(externos.size()));
             }
         });
 
@@ -59,6 +57,16 @@ public class MainActivity extends Activity {
             case 1:
                 alunos.put(resultado.getString(NOME),resultado.getString(INFO));
                 numAlunos.setText("Alunos: "+Integer.toString(alunos.size()));
+                break;
+            case 2:
+                servidores.put(resultado.getString(NOME),resultado.getString(INFO));
+                numServ.setText("Servidores: "+Integer.toString(servidores.size()));
+                break;
+            case 3:
+                externos.put(resultado.getString(NOME),resultado.getString(INFO));
+                numExt.setText("Externos"+Integer.toString(externos.size()));
+                break;
+            default:break;
         }
     }
 }
