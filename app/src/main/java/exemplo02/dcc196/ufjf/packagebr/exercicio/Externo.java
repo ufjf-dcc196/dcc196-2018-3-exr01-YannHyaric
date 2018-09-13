@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class Externo extends Activity {
     private EditText nome, email;
@@ -22,11 +23,16 @@ public class Externo extends Activity {
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent result = new Intent();
-                result.putExtra(MainActivity.NOME, nome.getText().toString());
-                result.putExtra(MainActivity.INFO, email.getText().toString());
-                setResult(Activity.RESULT_OK, result);
-                finish();
+                if (nome.getText().length() > 0 && email.getText().length() > 0) {
+                    Intent result = new Intent();
+                    result.putExtra(MainActivity.NOME, nome.getText().toString());
+                    result.putExtra(MainActivity.INFO, email.getText().toString());
+                    setResult(Activity.RESULT_OK, result);
+                    finish();
+                } else {
+                    TextView erro = findViewById(R.id.error_Ext);
+                    erro.setText("Os campos não podem ser vazios");
+                }
             }
         });
     }

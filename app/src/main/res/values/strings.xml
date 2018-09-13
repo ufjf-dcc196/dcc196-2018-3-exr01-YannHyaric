@@ -13,4 +13,5 @@
     <string name="matricula">Matricula</string>
     <string name="e_mail">e-mail</string>
     <string name="email">email</string>
+    <string name="vazio" />
 </resources>
